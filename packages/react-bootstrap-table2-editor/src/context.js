@@ -94,8 +94,8 @@ export default (
         handleCellChange(rowId, column.dataField, newValue);
       } else {
         dataOperator.editCell(data, keyField, rowId, column.dataField, newValue);
-        if (_.isFunction(afterSaveCell)) afterSaveCell(oldValue, newValue, row, column);
         this.completeEditing();
+        if (_.isFunction(afterSaveCell)) afterSaveCell(oldValue, newValue, row, column);
       }
     }
 
